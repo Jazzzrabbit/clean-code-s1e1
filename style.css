@@ -40,6 +40,13 @@
   flex-grow: 1;
 }
 
+.add-section {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
 .add-section__wrapper {
   display: flex;
 }
