@@ -12,38 +12,38 @@
   </div>
   <div class="main">
     <p id="add-section">
-      <label for="new-task">Add Item</label>
+      <label class="add-section__label" for="new-task">Add Item</label>
       <div class="add-section__wrapper">
-        <input id="new-task" class="input add-section__input" type="text">
+        <input id="new-task" class="input add-section__input input_text" type="text">
         <button class="btn">Add</button>
       </div>
     </p>
     <h3 class="subtitle">Todo</h3>
-    <ul class="list" id="incomplete-tasks">
+    <ul class="list incomplete-list" id="incomplete-tasks">
       <li class="list__item">
-        <input type="checkbox">
-        <label class="input">Pay Bills</label>
-        <input type="text" class="input">
+        <input class="checkbox" type="checkbox">
+        <label class="input list__label">Pay Bills</label>
+        <input type="text" class="list__input input input_text">
         <button class="btn edit-btn">Edit</button>
         <button class="btn delete-btn">
           <img class="delete-btn__img" src="./remove.svg">
         </button>
       </li>
       <li class="list__item list__item_edit">
-        <input type="checkbox">
-        <label class="input">Go Shopping</label>
-        <input type="text" value="Go Shopping" class="input">
+        <input class="checkbox" type="checkbox">
+        <label class="input list__label label_edit">Go Shopping</label>
+        <input type="text" value="Go Shopping" class="list__input input input_text input_edit">
         <button class="btn edit-btn">Save</button>
         <button class="btn delete-btn">
           <img class="delete-btn__img" src="./remove.svg"></button>
         </li>
       </ul>
     <h3 class="subtitle">Completed</h3>
-    <ul class="list" id="completed-tasks">
+    <ul class="list completed-list" id="completed-tasks">
       <li class="list__item">
-        <input type="checkbox" checked>
-        <label class="input">See the Doctor</label>
-        <input type="text" class="input">
+        <input class="checkbox" type="checkbox" checked>
+        <label class="input list__label completed-list__label">See the Doctor</label>
+        <input type="text" class="list__input input input_text">
         <button class="btn edit-btn">Edit</button>
         <button class="btn delete-btn">
           <img class="delete-btn__img" src="./remove.svg">
@@ -63,6 +63,8 @@
   h3 = subtitle
   .task = input
   .aaa = .header
+  .task-row-wrapper = add-section__wrapper
+  label[for="new-task"] = add-section__label
   img = .header__img, delete-btn__img
   .more_inf = header__info
   .centered-main-page-element = main
@@ -72,4 +74,6 @@
   .editMode = list__item_edit
   .edit = edit-btn
   .delete = delete-btn
+  li > * {vertical-align: middle;}
  -->
+
