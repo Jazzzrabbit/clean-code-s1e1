@@ -47,6 +47,7 @@ var createNewTaskElement=function(taskString){
   deleteButton.className="btn delete-btn";
   deleteButtonImg.className="delete-btn__img"
   deleteButtonImg.src='./remove.svg';
+  deleteButtonImg.alt="Delete button icon";
   deleteButton.appendChild(deleteButtonImg);
 
   listItem.className="list__item";
@@ -90,13 +91,13 @@ var editTask=function(){
   var containsClass=listItem.classList.contains("list__item_edit");
   //If class of the parent is .editmode
   if(containsClass){
-      //switch to .editmode
-      //label becomes the inputs value.
-      label.innerText=editInput.value;
-      editBtn.innerText="Edit";
+    //switch to .editmode
+    //label becomes the inputs value.
+    label.innerText=editInput.value;
+    editBtn.innerText="Edit";
   }else{
-      editInput.value=label.innerText;
-      editBtn.innerText="Save";
+    editInput.value=label.innerText;
+    editBtn.innerText="Save";
   }
 
   //toggle .editmode on the parent.
